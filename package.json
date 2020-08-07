@@ -1,6 +1,6 @@
 {
   "name": "cloudsponge-vue",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Vue component to launch the Cloudsponge address book",
   "license": "MIT",
   "private": false,
@@ -51,9 +51,7 @@
     "node": ">=10"
   },
   "repository": {
+    "type": "git",
     "url": "git@github.com:domness/cloudsponge-vue.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
