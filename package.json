@@ -1,7 +1,9 @@
 {
   "name": "cloudsponge-vue",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.3",
+  "description": "Vue component to launch the Cloudsponge address book",
+  "license": "MIT",
+  "private": false,
   "main": "dist/cloudsponge-vue.ssr.js",
   "browser": "dist/cloudsponge-vue.esm.js",
   "module": "dist/cloudsponge-vue.esm.js",
@@ -17,7 +19,8 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "release": "standard-version"
   },
   "dependencies": {},
   "devDependencies": {
@@ -37,7 +40,7 @@
     "rollup-plugin-terser": "^5.3.0",
     "rollup-plugin-vue": "^5.1.6",
     "standard-version": "^8.0.2",
-    "typescript": "^3.8.3",
+    "typescript": "^3.9.7",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },

@@ -1,18 +1,39 @@
 <script lang="ts">
 import Vue from 'vue';
 
+declare global {
+  interface Window { cloudsponge: any; }
+};
+
 export default Vue.extend({
   name: 'CloudspongeVue', // vue component name
   props: {
     apiKey: {
       type: String,
-      default: '6PCap7zRaiSNYcpB4znxpQ',
+      default: '',
+    },
+    afterSubmit: {
+      type: Function,
+      default: () => {},
+    },
+    config: {
+      type: Object,
+      default: () => {},
     },
   },
   mounted() {
-    let externalScript = document.createElement('script');
-    externalScript.setAttribute('src', `https://api.cloudsponge.com/widget/${this.apiKey}.js`);
-    document.head.appendChild(externalScript);
+    this.$nextTick(() => {
+      let externalScript = document.createElement('script');
+      externalScript.setAttribute('src', `https://api.cloudsponge.com/widget/${this.apiKey}.js`);
+      externalScript.async = true;
+      externalScript.onload = () => {
+        window.cloudsponge?.init({
+          ...this.config,
+          afterSubmitContacts: this.afterSubmit,
+        });
+      }
+      document.head.appendChild(externalScript);
+    });
   },
 });
 </script>
@@ -20,7 +41,6 @@ export default Vue.extend({
 <template>
   <div class="cloudsponge-vue">
     <div class="cloudsponge-launch">
-      <span>Something</span>
       <slot></slot>
     </div>
   </div>
