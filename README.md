@@ -2,6 +2,8 @@
 
 ## Installation
 
+cloudsponge-vue can be installed using the following methods:
+
 ```
 yarn add cloudsponge-vue
 ```
