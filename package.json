@@ -50,6 +50,9 @@
   "engines": {
     "node": ">=10"
   },
+  "repository": {
+    "url": "git@github.com:domness/cloudsponge-vue.git"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   }
