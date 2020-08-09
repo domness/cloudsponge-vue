@@ -6,7 +6,7 @@ declare global {
 };
 
 export default Vue.extend({
-  name: 'CloudspongeVue', // vue component name
+  name: 'CloudspongeVue',
   props: {
     apiKey: {
       type: String,

@@ -30,6 +30,7 @@ npm i --save cloudsponge-vue
 main:
 
 ```javascript
+// main.ts
 import Cloudsponge from 'cloudsponge-vue';
 Vue.use(Cloudsponge);
 ```
@@ -51,8 +52,9 @@ import Vue from 'vue';
 export default Vue.extend({
   name: 'MyComponent',
   methods: {
-    submittedContacts(a) {
-      console.log('Got contacts');
+    submittedContacts(contacts) {
+      console.log('Cloudsponge: submitted contacts');
+      const emails = contacts.map((c) => c.selectedEmail());
     }
   }
 });
