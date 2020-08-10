@@ -2,7 +2,6 @@ import Vue from 'vue';
 
 var script = Vue.extend({
   name: 'CloudspongeVue',
-  // vue component name
   props: {
     apiKey: {
       type: String,
@@ -137,7 +136,7 @@ var __vue_staticRenderFns__ = [];
 const __vue_inject_styles__ = undefined;
 /* scoped */
 
-const __vue_scope_id__ = "data-v-2d261c86";
+const __vue_scope_id__ = "data-v-5743df85";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;

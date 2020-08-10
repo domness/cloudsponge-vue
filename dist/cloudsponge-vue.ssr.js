@@ -47,7 +47,6 @@ function _objectSpread2(target) {
   return target;
 }var script = Vue.extend({
   name: 'CloudspongeVue',
-  // vue component name
   props: {
     apiKey: {
       type: String,
@@ -167,7 +166,7 @@ var __vue_render__ = function __vue_render__() {
 
   return _c('div', {
     staticClass: "cloudsponge-vue"
-  }, [_vm._ssrNode("<div class=\"cloudsponge-launch\" data-v-2d261c86>", "</div>", [_vm._t("default")], 2)]);
+  }, [_vm._ssrNode("<div class=\"cloudsponge-launch\" data-v-5743df85>", "</div>", [_vm._t("default")], 2)]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -176,10 +175,10 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-2d261c86";
+var __vue_scope_id__ = "data-v-5743df85";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-2d261c86";
+var __vue_module_identifier__ = "data-v-5743df85";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
