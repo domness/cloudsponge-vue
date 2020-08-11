@@ -16,6 +16,9 @@ var script = Vue.extend({
       default: () => {}
     }
   },
+  data: () => ({
+    isLoading: true
+  }),
 
   mounted() {
     this.$nextTick(() => {
@@ -29,6 +32,7 @@ var script = Vue.extend({
         (_window$cloudsponge = window.cloudsponge) === null || _window$cloudsponge === void 0 ? void 0 : _window$cloudsponge.init({ ...this.config,
           afterSubmitContacts: this.afterSubmit
         });
+        this.isLoading = false;
       };
 
       document.head.appendChild(externalScript);
@@ -127,7 +131,7 @@ var __vue_render__ = function () {
     staticClass: "cloudsponge-vue"
   }, [_c('div', {
     staticClass: "cloudsponge-launch"
-  }, [_vm._t("default")], 2)]);
+  }, [_vm.isLoading ? _vm._t("loading") : _vm._t("body")], 2)]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -136,7 +140,7 @@ var __vue_staticRenderFns__ = [];
 const __vue_inject_styles__ = undefined;
 /* scoped */
 
-const __vue_scope_id__ = "data-v-5743df85";
+const __vue_scope_id__ = "data-v-fa8fe69a";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;

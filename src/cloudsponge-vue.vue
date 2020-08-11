@@ -19,8 +19,11 @@ export default Vue.extend({
     config: {
       type: Object,
       default: () => {},
-    },
+    }
   },
+  data: () => ({
+    isLoading: true,
+  }),
   mounted() {
     this.$nextTick(() => {
       let externalScript = document.createElement('script');
@@ -31,6 +34,7 @@ export default Vue.extend({
           ...this.config,
           afterSubmitContacts: this.afterSubmit,
         });
+        this.isLoading = false;
       }
       document.head.appendChild(externalScript);
     });
@@ -41,7 +45,8 @@ export default Vue.extend({
 <template>
   <div class="cloudsponge-vue">
     <div class="cloudsponge-launch">
-      <slot></slot>
+      <slot name="loading" v-if="isLoading"></slot>
+      <slot name="body" v-else></slot>
     </div>
   </div>
 </template>

@@ -22,7 +22,10 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
     "release": "standard-version"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
@@ -41,8 +44,7 @@
     "rollup-plugin-vue": "^5.1.9",
     "standard-version": "^8.0.2",
     "typescript": "^3.9.7",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "core-js": "^3.6.5"
   },
   "peerDependencies": {
     "vue": "^2.6.11"

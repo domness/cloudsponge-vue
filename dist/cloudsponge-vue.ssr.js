@@ -61,6 +61,11 @@ function _objectSpread2(target) {
       default: function _default() {}
     }
   },
+  data: function data() {
+    return {
+      isLoading: true
+    };
+  },
   mounted: function mounted() {
     var _this = this;
 
@@ -75,6 +80,7 @@ function _objectSpread2(target) {
         (_window$cloudsponge = window.cloudsponge) === null || _window$cloudsponge === void 0 ? void 0 : _window$cloudsponge.init(_objectSpread2(_objectSpread2({}, _this.config), {}, {
           afterSubmitContacts: _this.afterSubmit
         }));
+        _this.isLoading = false;
       };
 
       document.head.appendChild(externalScript);
@@ -166,7 +172,7 @@ var __vue_render__ = function __vue_render__() {
 
   return _c('div', {
     staticClass: "cloudsponge-vue"
-  }, [_vm._ssrNode("<div class=\"cloudsponge-launch\" data-v-5743df85>", "</div>", [_vm._t("default")], 2)]);
+  }, [_vm._ssrNode("<div class=\"cloudsponge-launch\" data-v-fa8fe69a>", "</div>", [_vm.isLoading ? _vm._t("loading") : _vm._t("body")], 2)]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -175,10 +181,10 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-5743df85";
+var __vue_scope_id__ = "data-v-fa8fe69a";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-5743df85";
+var __vue_module_identifier__ = "data-v-fa8fe69a";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

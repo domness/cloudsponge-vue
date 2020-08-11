@@ -41,7 +41,12 @@ view:
 <template>
   <div>
     <CloudspongeVue apiKey="my-api-key" :afterSubmit="submittedContacts">
-      <button>Open address book</button>
+      <template v-slot:loading>
+        <button>Loading...</button>
+      </template>
+      <template v-slot:body>
+        <button>Add friends from your contacts</button>
+      </template>
     </CloudspongeVue>
   </div>
 </template>
