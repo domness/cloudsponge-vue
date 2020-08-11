@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/domness/cloudsponge-vue/compare/v0.0.8...v0.0.9) (2020-08-11)
+
+
+### Features
+
+* add loading state to component ([44fd27d](https://github.com/domness/cloudsponge-vue/commit/44fd27db2fcf8bed697329c220bab91329003c58))
+
 ### [0.0.8](https://github.com/domness/cloudsponge-vue/compare/v0.0.6...v0.0.8) (2020-08-10)
 
 
