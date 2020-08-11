@@ -30,15 +30,21 @@ var script = Vue.extend({
         var _window$cloudsponge;
 
         (_window$cloudsponge = window.cloudsponge) === null || _window$cloudsponge === void 0 ? void 0 : _window$cloudsponge.init({ ...this.config,
-          afterSubmitContacts: this.afterSubmit
+          afterSubmitContacts: this.afterSubmit,
+          afterInit: this.afterInit
         });
-        this.isLoading = false;
       };
 
       document.head.appendChild(externalScript);
     });
-  }
+  },
 
+  methods: {
+    afterInit() {
+      this.isLoading = false;
+    }
+
+  }
 });
 
 function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
@@ -128,10 +134,8 @@ var __vue_render__ = function () {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "cloudsponge-vue"
-  }, [_c('div', {
     staticClass: "cloudsponge-launch"
-  }, [_vm.isLoading ? _vm._t("loading") : _vm._t("body")], 2)]);
+  }, [_vm.isLoading ? _vm._t("loading") : _vm._t("body")], 2);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -140,7 +144,7 @@ var __vue_staticRenderFns__ = [];
 const __vue_inject_styles__ = undefined;
 /* scoped */
 
-const __vue_scope_id__ = "data-v-fa8fe69a";
+const __vue_scope_id__ = "data-v-2fa8e188";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;

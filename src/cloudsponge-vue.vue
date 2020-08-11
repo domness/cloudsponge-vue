@@ -33,21 +33,24 @@ export default Vue.extend({
         window.cloudsponge?.init({
           ...this.config,
           afterSubmitContacts: this.afterSubmit,
+          afterInit: this.afterInit,
         });
-        this.isLoading = false;
       }
       document.head.appendChild(externalScript);
     });
   },
+  methods: {
+    afterInit() {
+      this.isLoading = false;
+    }
+  }
 });
 </script>
 
 <template>
-  <div class="cloudsponge-vue">
-    <div class="cloudsponge-launch">
-      <slot name="loading" v-if="isLoading"></slot>
-      <slot name="body" v-else></slot>
-    </div>
+  <div class="cloudsponge-launch">
+    <slot name="loading" v-if="isLoading"></slot>
+    <slot name="body" v-else></slot>
   </div>
 </template>
 

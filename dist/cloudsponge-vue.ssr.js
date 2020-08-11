@@ -78,13 +78,18 @@ function _objectSpread2(target) {
         var _window$cloudsponge;
 
         (_window$cloudsponge = window.cloudsponge) === null || _window$cloudsponge === void 0 ? void 0 : _window$cloudsponge.init(_objectSpread2(_objectSpread2({}, _this.config), {}, {
-          afterSubmitContacts: _this.afterSubmit
+          afterSubmitContacts: _this.afterSubmit,
+          afterInit: _this.afterInit
         }));
-        _this.isLoading = false;
       };
 
       document.head.appendChild(externalScript);
     });
+  },
+  methods: {
+    afterInit: function afterInit() {
+      this.isLoading = false;
+    }
   }
 });function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
     if (typeof shadowMode !== 'boolean') {
@@ -171,8 +176,8 @@ var __vue_render__ = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "cloudsponge-vue"
-  }, [_vm._ssrNode("<div class=\"cloudsponge-launch\" data-v-fa8fe69a>", "</div>", [_vm.isLoading ? _vm._t("loading") : _vm._t("body")], 2)]);
+    staticClass: "cloudsponge-launch"
+  }, [_vm.isLoading ? _vm._t("loading") : _vm._t("body")], 2);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -181,10 +186,10 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-fa8fe69a";
+var __vue_scope_id__ = "data-v-2fa8e188";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-fa8fe69a";
+var __vue_module_identifier__ = "data-v-2fa8e188";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
