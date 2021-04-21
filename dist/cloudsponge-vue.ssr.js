@@ -1,4 +1,4 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});function _interopDefault(e){return(e&&(typeof e==='object')&&'default'in e)?e['default']:e}var Vue=_interopDefault(require('vue'));function _defineProperty(obj, key, value) {
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var Vue=require('vue');function _interopDefaultLegacy(e){return e&&typeof e==='object'&&'default'in e?e:{'default':e}}var Vue__default=/*#__PURE__*/_interopDefaultLegacy(Vue);function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
       value: value,
@@ -45,7 +45,7 @@ function _objectSpread2(target) {
   }
 
   return target;
-}var script = Vue.extend({
+}var script = Vue__default['default'].extend({
   name: 'CloudspongeVue',
   props: {
     apiKey: {
