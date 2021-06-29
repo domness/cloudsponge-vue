@@ -1,0 +1,36 @@
+{
+  "types": [
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "chore",
+      "section": "Miscellaneous"
+    },
+    {
+      "type": "docs",
+      "section": "Miscellaneous"
+    },
+    {
+      "type": "style",
+      "section": "Miscellaneous"
+    },
+    {
+      "type": "refactor",
+      "section": "Miscellaneous"
+    },
+    {
+      "type": "perf",
+      "hidden": true
+    },
+    {
+      "type": "test",
+      "hidden": true
+    }
+  ]
+}
