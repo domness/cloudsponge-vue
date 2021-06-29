@@ -1,11 +1,11 @@
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent, nextTick, onMounted, ref } from 'vue';
 
 declare global {
   interface Window { cloudsponge: any; }
 };
 
-export default Vue.extend({
+export default defineComponent({
   name: 'CloudspongeVue',
   props: {
     apiKey: {
@@ -21,29 +21,31 @@ export default Vue.extend({
       default: () => {},
     }
   },
-  data: () => ({
-    isLoading: true,
-  }),
-  mounted() {
-    this.$nextTick(() => {
-      let externalScript = document.createElement('script');
-      externalScript.setAttribute('src', `https://api.cloudsponge.com/widget/${this.apiKey}.js`);
-      externalScript.async = true;
-      externalScript.onload = () => {
-        window.cloudsponge?.init({
-          ...this.config,
-          afterSubmitContacts: this.afterSubmit,
-          afterInit: this.afterInit,
-        });
-      }
-      document.head.appendChild(externalScript);
+  setup(props) {
+    let isLoading = ref(true);
+
+    const afterInit = () => { isLoading.value = false };
+
+    onMounted(() => {
+      nextTick(() => {
+        let externalScript = document.createElement('script');
+        externalScript.setAttribute('src', `https://api.cloudsponge.com/widget/${props.apiKey}.js`);
+        externalScript.async = true;
+        externalScript.onload = () => {
+          window.cloudsponge?.init({
+            ...props.config,
+            afterSubmitContacts: props.afterSubmit,
+            afterInit: afterInit(),
+          });
+        }
+        document.head.appendChild(externalScript);
+      });
     });
-  },
-  methods: {
-    afterInit() {
-      this.isLoading = false;
+
+    return {
+      isLoading,
     }
-  }
+  },
 });
 </script>
 

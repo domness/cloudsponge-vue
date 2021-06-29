@@ -5,13 +5,13 @@
 cloudsponge-vue can be installed using the following methods:
 
 ```
-yarn add cloudsponge-vue
+yarn add cloudsponge-vue@next
 ```
 
 or
 
 ```
-npm i --save cloudsponge-vue
+npm i --save cloudsponge-vue@next
 ```
 
 ## Props
@@ -25,14 +25,16 @@ npm i --save cloudsponge-vue
   - Cloudsponge Configuration
   - https://www.cloudsponge.com/developer/address-book-widget/options/
 
-## Usage
+## Usage (Vue3)
 
 main:
 
 ```javascript
 // main.ts
+const app = createApp({ ... });
+
 import Cloudsponge from 'cloudsponge-vue';
-Vue.use(Cloudsponge);
+app.use(Cloudsponge);
 ```
 
 view:
@@ -52,15 +54,17 @@ view:
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'MyComponent',
-  methods: {
-    submittedContacts(contacts) {
+  setup() {
+    const submittedContacts = (contacts) => {
       console.log('Cloudsponge: submitted contacts');
       const emails = contacts.map((c) => c.selectedEmail());
+      console.log('Emails are:', emails);
     }
+    return { submittedContacts };
   }
 });
 </script>

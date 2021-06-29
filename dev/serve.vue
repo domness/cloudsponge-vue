@@ -1,24 +1,6 @@
-<script lang="ts">
-import Vue from 'vue';
-import CloudspongeVue from '@/cloudsponge-vue.vue';
-
-export default Vue.extend({
-  name: 'ServeDev',
-  components: {
-    CloudspongeVue
-  },
-  data: () => ({
-    apiKey: '',
-  }),
-  created() {
-    this.apiKey = process.env.VUE_APP_CLOUDSPONGE_KEY || '';
-  }
-});
-</script>
-
 <template>
   <div id="app">
-    <CloudspongeVue :apiKey="apiKey">
+    <CloudspongeVue :apiKey="apiKey" :afterSubmit="submittedContacts">
       <template v-slot:loading>
         <button>Loading</button>
       </template>
@@ -28,3 +10,29 @@ export default Vue.extend({
     </CloudspongeVue>
   </div>
 </template>
+
+<script>
+import { defineComponent, ref } from 'vue';
+import CloudspongeVue from '@/cloudsponge-vue.vue';
+
+export default {
+  name: 'ServeDev',
+  components: {
+    CloudspongeVue
+  },
+  setup() {
+    let apiKey = ref(process.env.VUE_APP_CLOUDSPONGE_KEY || '');
+
+    const submittedContacts = (contacts) => {
+      console.log('Cloudsponge: submitted contacts');
+      const emails = contacts.map((c) => c.selectedEmail());
+      console.log('Emails are:', emails);
+    }
+
+    return {
+      apiKey,
+      submittedContacts,
+    }
+  }
+};
+</script>
