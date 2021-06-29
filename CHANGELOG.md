@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/domness/cloudsponge-vue/compare/v0.0.11...v1.0.0) (2021-06-29)
+
+
+### Features
+
+* add node version ([c5f3431](https://github.com/domness/cloudsponge-vue/commit/c5f343113c6b74da27776bd67a498b53abc5eba0))
+* update to use vue3 ([811693d](https://github.com/domness/cloudsponge-vue/commit/811693daf43caaeb7a394ef0c2f23b1cc96c9d7c))
+
+
+### Miscellaneous
+
+* **deps:** update packages for vue3 ([4c47126](https://github.com/domness/cloudsponge-vue/commit/4c47126c6a46472b1b79c81b346327e814598377))
+* include dep updates with standard-version ([c528bce](https://github.com/domness/cloudsponge-vue/commit/c528bcee0b718d48e29b06b901a29439fb1a5d6a))
+
 ### [0.0.11](https://github.com/domness/cloudsponge-vue/compare/v0.0.10...v0.0.11) (2021-04-21)
 
 
