@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/domness/cloudsponge-vue/compare/v0.0.11...v0.0.12) (2021-09-15)
+
+
+### Features
+
+* add node version ([c5f3431](https://github.com/domness/cloudsponge-vue/commit/c5f343113c6b74da27776bd67a498b53abc5eba0))
+
+
+### Miscellaneous
+
+* **deps:** update dependencies and use npm lockfile 2 ([4779f0f](https://github.com/domness/cloudsponge-vue/commit/4779f0f31bf4610ab17b9d00774072547b884376))
+* include dep updates with standard-version ([c528bce](https://github.com/domness/cloudsponge-vue/commit/c528bcee0b718d48e29b06b901a29439fb1a5d6a))
+
 ### [0.0.11](https://github.com/domness/cloudsponge-vue/compare/v0.0.10...v0.0.11) (2021-04-21)
 
 
