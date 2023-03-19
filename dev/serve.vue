@@ -1,8 +1,8 @@
 <script lang="ts">
-import Vue from 'vue';
-import CloudspongeVue from '@/cloudsponge-vue.vue';
+import { defineComponent } from 'vue';
+import CloudspongeVue from '@/CloudspongeVue.vue';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'ServeDev',
   components: {
     CloudspongeVue
@@ -11,7 +11,7 @@ export default Vue.extend({
     apiKey: '',
   }),
   created() {
-    this.apiKey = process.env.VUE_APP_CLOUDSPONGE_KEY || '';
+    this.apiKey = '1234';
   }
 });
 </script>

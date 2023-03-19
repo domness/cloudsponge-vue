@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "jsx": "preserve",
     "strict": true,
     "declaration": true,
     "declarationDir": "dist",
@@ -15,7 +16,6 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "node",
       "vue"
     ],
     "paths": {

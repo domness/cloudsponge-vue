@@ -1,11 +1,11 @@
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 
 declare global {
   interface Window { cloudsponge: any; }
 };
 
-export default Vue.extend({
+export default defineComponent({
   name: 'CloudspongeVue',
   props: {
     apiKey: {

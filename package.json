@@ -1,13 +1,10 @@
 {
   "name": "cloudsponge-vue",
-  "version": "0.0.12",
+  "version": "1.0.0",
   "description": "Vue component to launch the Cloudsponge address book",
   "license": "MIT",
   "private": false,
-  "main": "dist/cloudsponge-vue.ssr.js",
-  "browser": "dist/cloudsponge-vue.esm.js",
-  "module": "dist/cloudsponge-vue.esm.js",
-  "unpkg": "dist/cloudsponge-vue.min.js",
+  "main": "dist/index.js",
   "types": "cloudsponge-vue.d.ts",
   "files": [
     "dist/*",
@@ -15,42 +12,31 @@
     "src/**/*.vue"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve dev/serve.ts",
-    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
-    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "build": "rollup -c --bundleConfigAsCjs",
     "release": "standard-version"
   },
   "dependencies": {
-    "vue": "^2.6.14",
-    "vue-template-compiler": "^2.6.14"
+    "vue": "^3.2.47",
+    "vue-template-compiler": "^2.7.14"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-typescript": "^7.15.0",
-    "@rollup/plugin-alias": "^3.1.5",
-    "@rollup/plugin-commonjs": "^20.0.0",
-    "@rollup/plugin-replace": "^3.0.0",
-    "@vue/cli-plugin-babel": "^4.5.13",
-    "@vue/cli-plugin-typescript": "^4.5.13",
-    "@vue/cli-service": "^4.5.13",
-    "core-js": "^3.17.3",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
+    "core-js": "^3.29.1",
     "cross-env": "^7.0.3",
-    "minimist": "^1.2.5",
-    "rollup": "^2.56.3",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "^5.1.9",
-    "standard-version": "^9.3.1",
+    "rollup": "^3.19.1",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "standard-version": "^9.5.0",
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
-    "vue": "^2.6.12"
+    "vue": "^3.2"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "repository": {
     "type": "git",
