@@ -1,7 +1,6 @@
 'use strict';
 
 var vue = require('vue');
-var component = require('@/CloudspongeVue.vue');
 
 var script = vue.defineComponent({
     name: 'CloudspongeVue',
@@ -62,7 +61,7 @@ script.__file = "src/CloudspongeVue.vue";
 const CloudspongeVuePlugin = {
     install(app) {
         // register Headline as a global component, so you can use it wherever you want in your app
-        app.component('CloudspongeVue', component);
+        app.component('CloudspongeVue', script);
     }
 };
 

@@ -1,7 +1,7 @@
 import { App, Plugin } from 'vue';
 
 // Import vue component
-import component from '@/CloudspongeVue.vue';
+import component from './CloudspongeVue.vue';
 
 // The Install function used by Vue to register the plugin
 export const CloudspongeVuePlugin: Plugin = {

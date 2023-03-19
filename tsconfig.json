@@ -18,11 +18,6 @@
     "types": [
       "vue"
     ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
     "lib": [
       "esnext",
       "dom",
