@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/domness/cloudsponge-vue/compare/v1.0.1...v1.0.2) (2023-03-19)
+
+
+### Bug Fixes
+
+* remove typescript paths ([0c797bd](https://github.com/domness/cloudsponge-vue/commit/0c797bd730f1c79058d81e8f02b3582731c5aff7))
+
 ### [1.0.1](https://github.com/domness/cloudsponge-vue/compare/v0.0.12...v1.0.1) (2023-03-19)
 
 ### [0.0.12](https://github.com/domness/cloudsponge-vue/compare/v0.0.11...v0.0.12) (2021-09-15)
