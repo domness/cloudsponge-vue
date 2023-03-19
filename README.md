@@ -31,11 +31,11 @@ npm i --save cloudsponge-vue
 
 ```javascript
 import { createApp } from 'vue';
-import { CloudspongeVue } from 'cloudsponge-vue';
+import { CloudSpongeVue } from 'cloudsponge-vue';
 
 const app = createApp({});
 
-app.component('cloudsponge-vue', CloudspongeVue);
+app.component('cloudsponge-vue', CloudSpongeVue);
 app.mount('#app');
 ```
 
@@ -43,10 +43,10 @@ app.mount('#app');
 
 ```javascript
 import { createApp } from 'vue';
-import { CloudspongeVuePlugin } from 'cloudsponge-vue';
+import { CloudSpongeVuePlugin } from 'cloudsponge-vue';
 
 const app = createApp({});
-CloudspongeVuePlugin.install(app);
+CloudSpongeVuePlugin.install(app);
 app.mount('#app');
 ```
 
@@ -55,14 +55,14 @@ app.mount('#app');
 ```vue
 <template>
   <div>
-    <CloudspongeVue apiKey="my-api-key" :afterSubmit="submittedContacts">
+    <cloudsponge-vue apiKey="my-api-key" :afterSubmit="submittedContacts">
       <template v-slot:loading>
         <button>Loading...</button>
       </template>
       <template v-slot:body>
         <button>Add friends from your contacts</button>
       </template>
-    </CloudspongeVue>
+    </cloudsponge-vue>
   </div>
 </template>
 
