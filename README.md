@@ -1,8 +1,8 @@
-# cloudsponge-vue
+# CloudSponge for Vue 3
 
 ## Installation
 
-cloudsponge-vue can be installed using the following methods:
+CloudSponge Vue can be installed using the following methods:
 
 ```
 yarn add cloudsponge-vue
@@ -17,25 +17,40 @@ npm i --save cloudsponge-vue
 ## Props
 
 - apiKey
-  - Cloudsponge API Key
+  - CloudSponge API Key
   - https://www.cloudsponge.com/developer/getting-started/
 - afterSubmit
   - Callback function when contacts have been submitted
 - config
-  - Cloudsponge Configuration
+  - CloudSponge Configuration
   - https://www.cloudsponge.com/developer/address-book-widget/options/
 
 ## Usage
 
-main:
+### Install as component
 
 ```javascript
-// main.ts
-import Cloudsponge from 'cloudsponge-vue';
-Vue.use(Cloudsponge);
+import { createApp } from 'vue';
+import { CloudspongeVue } from 'cloudsponge-vue';
+
+const app = createApp({});
+
+app.component('cloudsponge-vue', CloudspongeVue);
+app.mount('#app');
 ```
 
-view:
+### Install as plugin
+
+```javascript
+import { createApp } from 'vue';
+import { CloudspongeVuePlugin } from 'cloudsponge-vue';
+
+const app = createApp({});
+CloudspongeVuePlugin.install(app);
+app.mount('#app');
+```
+
+### Usage
 
 ```vue
 <template>
@@ -52,13 +67,13 @@ view:
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'MyComponent',
   methods: {
     submittedContacts(contacts) {
-      console.log('Cloudsponge: submitted contacts');
+      console.log('CloudSponge: submitted contacts');
       const emails = contacts.map((c) => c.selectedEmail());
     }
   }

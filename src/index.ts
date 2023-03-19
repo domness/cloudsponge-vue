@@ -1,4 +1,4 @@
-import CloudspongeVue from './CloudspongeVue.vue';
-import { CloudspongeVuePlugin } from './CloudspongeVuePlugin';
+import CloudSpongeVue from './CloudSpongeVue.vue';
+import { CloudSpongeVuePlugin } from './CloudSpongeVuePlugin';
 
-export { CloudspongeVue, CloudspongeVuePlugin };
+export { CloudSpongeVue, CloudSpongeVuePlugin };

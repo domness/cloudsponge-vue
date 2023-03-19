@@ -1,7 +1,7 @@
 {
   "name": "cloudsponge-vue",
   "version": "1.0.2",
-  "description": "Vue component to launch the Cloudsponge address book",
+  "description": "Vue component to launch the CloudSponge address book",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",

@@ -6,7 +6,7 @@ declare global {
 };
 
 export default defineComponent({
-  name: 'CloudspongeVue',
+  name: 'CloudSpongeVue',
   props: {
     apiKey: {
       type: String,

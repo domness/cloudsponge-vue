@@ -39,3 +39,4 @@ declare const _default: import("vue").DefineComponent<{
     config: Record<string, any>;
 }>;
 export default _default;
+//# sourceMappingURL=CloudSpongeVue.vue?vue&type=script&lang.d.ts.map

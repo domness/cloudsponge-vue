@@ -1,2 +1,3 @@
 import { Plugin } from 'vue';
-export declare const CloudspongeVuePlugin: Plugin;
+export declare const CloudSpongeVuePlugin: Plugin;
+//# sourceMappingURL=CloudSpongeVuePlugin.d.ts.map

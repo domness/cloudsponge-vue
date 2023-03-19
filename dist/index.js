@@ -3,7 +3,7 @@
 var vue = require('vue');
 
 var script = vue.defineComponent({
-    name: 'CloudspongeVue',
+    name: 'CloudSpongeVue',
     props: {
         apiKey: {
             type: String,
@@ -54,17 +54,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script.render = render;
-script.__file = "src/CloudspongeVue.vue";
+script.__file = "src/CloudSpongeVue.vue";
 
 // Import vue component
 // The Install function used by Vue to register the plugin
-const CloudspongeVuePlugin = {
+const CloudSpongeVuePlugin = {
     install(app) {
         // register Headline as a global component, so you can use it wherever you want in your app
-        app.component('CloudspongeVue', script);
+        app.component('CloudSpongeVue', script);
     }
 };
 
-exports.CloudspongeVue = script;
-exports.CloudspongeVuePlugin = CloudspongeVuePlugin;
+exports.CloudSpongeVue = script;
+exports.CloudSpongeVuePlugin = CloudSpongeVuePlugin;
 //# sourceMappingURL=index.js.map
